@@ -1,0 +1,749 @@
+:root{
+    --textpaddingTop:100px;
+    --textpaddingBottom: 100px;
+    --textfontHeading:70px;
+    --textfontDesc: 32px;
+    --texttextAlign:left;
+}
+.textComponent {
+    max-width: 70%;
+    width: 100%;
+    margin: 170px auto;
+    position: relative;
+    z-index: 5;
+    font-family: var(--pnr);
+}
+.sustainability-text .textComponent{
+    padding-top: var(--textpaddingTop) !important;
+    padding-bottom: var(--textpaddingBottom) !important;
+}
+
+.textComponent.firstSection {
+    margin: 70px auto 170px;
+}
+
+.textComponent.purpleBg {
+    background: #2A163E;
+    max-width: unset;
+    padding: 100px 0;
+    margin: 0;
+    color: #fff;
+}
+
+.textComponent.whiteBg {
+    font-family: var(--pnsb);
+    max-width: unset;
+    padding: 50px 0;
+    color: #606060;
+    /* display: block; */
+    margin: 0 0 30px;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.textComponent.circularAnimation.whiteBg .circle-container {
+    left: 95%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.textComponent .text .title {
+    font-family: var(--pnr);
+    font-size: var(--textfontHeading) !important;
+    line-height: 1.1;
+    text-align: var(--texttextAlign) !important;
+    letter-spacing: -0.03em;
+}
+
+.textComponent.crescent.circle-container__title .text .title {
+    width: fit-content;
+    margin: auto;
+}
+
+.textComponent.crescent.circle-container__description .text .desc {
+    width: fit-content;
+    margin: auto;
+}
+
+.textComponent.crescent.circle-container__title .text .title-container {
+    position: relative;
+    width: fit-content;
+    margin: 5% auto;
+}
+
+.textComponent.crescent.circle-container__description .text .desc-container {
+    position: relative;
+    width: fit-content;
+    margin: 5% auto;
+}
+
+/* .textComponent .text .title.boldText {
+    font-family: var(--pnb);
+    font-family: var(--pnsb);
+} */
+
+.textComponent .text .desc {
+    font-size: var(--textfontDesc) !important;
+    line-height: 1.1;
+    text-align: var(--texttextAlign) !important;
+}
+
+.textComponent.netZero .text .desc {
+    font-size: 42px;
+    line-height: 47px;
+}
+
+.textComponent .text .desc:not(:first-child) {
+    margin-top: 26px;
+}
+
+.textComponent .text .title:not(:first-child) {
+    margin-top: 40px;
+}
+
+.textComponent .text .buttonContainer {
+    margin-top: 40px;
+}
+
+.textComponent .text .buttonContainer>a {
+    padding-top: 21px;
+}
+
+.textComponent.circularAnimation,
+.textComponent.circularAnimation.purpleBg .cust_container {
+    position: relative;
+    overflow: visible;
+}
+
+.textComponent.circularAnimation .circle-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, 0);
+    /*padding: 40px 0;*/
+}
+
+.textComponent.circularAnimation .title-container .circle-container.circle-container__title, .textComponent.circularAnimation .desc-container .circle-container.circle-container__description {
+    transform: translate(0);
+    left: unset;
+}
+
+.textComponent.circularAnimation .text {
+    padding: 0 5%;
+    width: 100%;
+}
+
+.textComponent.circularAnimation .text.nopadreq {
+    padding: 0 40px;
+}
+
+.textComponent .text .title {
+    font-size: var(--textfontHeading) !important;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.textComponent .text .title,
+.textComponent .text .desc {
+    text-align: var(--texttextAlign) !important;
+}
+
+.textComponent.blackText .text .title,
+.textComponent.blackText .text .desc {
+    color: #000;
+}
+
+.textComponent.leftAlignContent .text .buttonContainer {
+    justify-content: flex-start;
+}
+
+.greenCircles .circle-container .circle--1:before,
+.greenCircles .circle-container .circle--2:before,
+.greenCircles .circle-container .circle--3:before,
+.greenCircles .circle-container .circle--4:before,
+.greenCircles .circle-container .circle--5:before,
+.greenCircles .circle-container .circle--6:before,
+.greenCircles .circle-container .circle--7:before {
+    background: #79b318;
+    opacity: 0.75;
+}
+
+.textComponent.circularAnimation.greenCircles .cust_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.textComponent.circularAnimation.greenCircles .cust_container .circle-container {
+    right: 20px;
+}
+
+.textComponent.leftAlignContent.purpleBg {
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.textComponent.leftAlignContent.purpleBg .circle-container {
+    left: 95%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.textComponent.leftAlignContent.purpleBg .circle-container img {
+    width: auto;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+
+.textComponent.leftAlignContent.purpleBg .text {
+    transform: translate(0, 0);
+}
+
+.sustainability .textComponent.netZero {
+    padding: 170px 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: unset;
+    overflow: hidden;
+}
+
+.textComponent.netZero .bg {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 200%;
+    height: auto;
+}
+
+.textComponent.netZero .text {
+    position: relative;
+}
+
+.animate .circle-container {
+    opacity: 1;
+}
+
+.animate .circle-container .circle--2 {
+    transform: rotate(30deg);
+}
+
+.animate .circle-container .circle--3 {
+    transform: rotate(60deg);
+}
+
+.animate .circle-container .circle--4 {
+    transform: rotate(90deg);
+}
+
+.animate .circle-container .circle--5 {
+    transform: rotate(-30deg);
+
+}
+
+.animate .circle-container .circle--6 {
+    transform: rotate(-60deg);
+}
+
+.animate .circle-container .circle--7 {
+    transform: rotate(-90deg);
+}
+
+.textComponent.circularAnimation.leftAlignContent.purpleBg .text {
+  margin: 0 auto;
+}
+
+.textComponent .circle-container img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+}
+
+.textComponent .cust_container {
+  overflow: visible;
+}
+
+.textComponent.textComponent_style2 .text .title {
+    font-family: var(--pnsb);
+    font-size: 41px;
+    line-height: 47px;
+
+    /* or 115% */
+    text-align: center;
+    font-feature-settings: 'liga'off;
+
+    color: #B1519D;
+}
+.textComponent.textComponent_style2 .buttonContainer a{
+    background: #4A2877;
+}
+
+.textComponent.crecsent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textComponent.crescent .text {
+    width: auto;
+    padding: 50px 0 !important;
+}
+
+@media only screen and (max-width: 1792px) {
+
+    /*resolution Height: 1120*/
+    .textComponent.leftAlignContent.purpleBg .circle-container {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+
+    /*resolution Height: 768*/
+    .textComponent .text .title {
+        font-size: 43px;
+        line-height: 40px;
+    }
+
+    .textComponent.leftAlignContent .text .title {
+        line-height: 1.2
+    }
+
+    .textComponent .text .desc {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .buttonContainer>a {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+
+    .textComponent .text .buttonContainer>a {
+        padding-top: 10px;
+    }
+
+}
+@media only screen and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
+    .textComponent.leftAlignContent.purpleBg .circle-container {
+        transform: translate(-50%, -50%);
+    }
+
+    .textComponent.circularAnimation.greenCircles .cust_container .circle-container {
+        right: -20px;
+    }
+
+    .textComponent.leftAlignContent.purpleBg .circle-container {
+        display: none;
+    }
+
+    .textComponent .text .title:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    .textComponent .text .desc br {
+        display: none;
+    }
+    .textComponent.netZero {
+        background: url(content/dam/nexus/staticsites/sustainability/assets/images/repeat_background/bgTrees-end.png) no-repeat center / cover;
+    }
+    .textComponent.netZero .text .desc:not(:first-child) {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .textComponent .cust_container {
+        max-width: unset;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 834px) and (max-height: 1194px) and (orientation: portrait) {
+    .textComponent .text br {
+        display: none;
+    }
+
+    .textComponent.circularAnimation .text {
+        padding: 40px 0;
+    }
+    .textComponent.circularAnimation .text.nopadreq {
+        padding: 0 20px;
+    }
+    .textComponent.circularAnimation.greenCircles .cust_container .circle-container {
+        right: -10%;
+    }
+
+    .textComponent.netZero {
+        background: url(content/dam/nexus/staticsites/sustainability/assets/images/repeat_background/bgTrees-end.png) no-repeat center / cover;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .textComponent.fullwidth.textComponent_style2 {
+        padding: 50px 0;
+    }
+
+    .textComponent.fullwidth.textComponent_style2 .circle-container {
+        display: none;
+    }
+
+    .textComponent.textComponent_style2 .text .title {
+        font-size: 28px;
+        line-height: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    .sustainability .textComponent {
+        max-width: 100%;
+        margin: 70px auto;
+    }
+
+    /*.textComponent.circularAnimation.greenCircles {
+        max-width: 82%;
+    }*/
+    .textComponent.circularAnimation.greenCircles .circle-container {
+        display: none;
+    }
+
+    .textComponent .text .title {
+        font-size: 38px;
+    }
+
+    .textComponent .text .desc:not(:first-child) {
+        font-size: 23px;
+        margin-top: 10px;
+    }
+
+    .textComponent .text .title {
+        font-size: 35px;
+    }
+
+    .sustainability .textComponent.netZero {
+        margin: 0;
+        padding: 70px 0 100px;
+    }
+
+    .textComponent.leftAlignContent.purpleBg .circle-container {
+        display: none;
+    }
+
+    .textComponent.leftAlignContent.purpleBg .text {
+        transform: unset;
+        padding: 0;
+    }
+
+    .textComponent .text .desc,
+    .textComponent .text .title {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .textComponent.netZero .text .desc {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1280px) and (max-height: 800px) {
+    .textComponent.netZero .bg {
+        display: block;
+    }
+
+    .textComponent.netZero {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .textComponent.leftAlignContent.purpleBg .circle-container {
+        display: none;
+    }
+    .textComponent.whiteBg .circle-container {
+        display: none;
+    }
+    .textComponent.leftAlignContent .text .title {
+        padding: 0 20px;
+    }
+
+    .textComponent.leftAlignContent .text .title br {
+        display: none;
+    }
+    .textComponent.leftAlignContent .text .desc {
+        padding: 0 20px;
+    }
+    .textComponent.leftAlignContent .text .desc br {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 801px) {
+    .textComponent.leftAlignContent .text .title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .sustainability .textComponent {
+        max-width: unset;
+    }
+
+    .textComponent .text .desc br {
+        display: none;
+    }
+
+    .textComponent .text .title br {
+        display: none;
+    }
+
+    .textComponent.netZero {
+        background: url(content/dam/nexus/staticsites/sustainability/assets/images/repeat_background/bgTrees-end.png) no-repeat center / cover;
+    }
+
+    .textComponent.firstSection {
+        margin: 50px auto 70px;
+    }
+
+    .textComponent .text .desc,
+    .textComponent .text .title {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 800px) and (max-height: 1280px) {
+    .textComponent.netZero .text .desc {
+        font-size: 35px;
+        padding: 0 10%;
+    }
+
+    .textComponent.netZero .text .desc br {
+        display: none;
+
+    }
+
+    .textComponent.leftAlignContent.purpleBg .text {
+        transform: unset;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 601px) and (max-height: 962px) {
+    .textComponent.netZero .text .desc {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 962px) and (max-height: 601px) {
+    .sustainability .textComponent {
+        max-width: unset;
+        margin: 100px auto;
+        /*padding: 100px 0*/
+    }
+
+    .textComponent.circularAnimation .circle-container {
+        display: none;
+    }
+
+    .textComponent.leftAlignContent.purpleBg .text {
+        transform: unset;
+    }
+
+    .sustainability .textComponent.netZero {
+        margin: 0;
+        padding: 100px 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (max-height: 600px) {
+    .sustainability .textComponent.netZero {
+        margin: 0;
+        padding: 100px 0;
+    }
+
+    .sustainability .textComponent {
+        margin: 100px auto;
+    }
+
+    .textComponent.circularAnimation .circle-container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .sustainability .textComponent {
+        width: 80%;
+        margin: 0 auto 70px;
+    }
+
+    .sustainability .textComponent.firstSection {
+        margin: 50px auto 70px;
+    }
+
+    .textComponent .text .title:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    .textComponent.circularAnimation .text {
+        padding: 40px 5%;
+    }
+    .textComponent.circularAnimation .text.nopadreq {
+        padding: 0 20px;
+    }
+
+    .textComponent.leftAlignContent.purpleBg {
+        margin: 0;
+        width: 100%;
+    }
+
+    .textComponent.leftAlignContent.purpleBg .circle-container {
+        display: none;
+    }
+
+    .textComponent.leftAlignContent .text .title {
+        text-align: center;
+    }
+
+    /*.buttonContainer>a {
+        font-size: 14px;
+    }*/
+}
+
+@media only screen and (max-width: 767px) {
+
+    .textComponent.netZero .text .title,
+    .textComponent.netZero .text .desc {
+        padding: 0 10%
+    }
+
+    .textComponent.netZero .text .desc {
+        line-height: 1.2;
+    }
+
+    .textComponent.leftAlignContent .text .buttonContainer {
+        justify-content: center;
+    }
+    .textComponent.circularAnimation .circle-container {
+        display: none;
+    }
+    .textComponent.leftAlignContent .text .desc {
+        text-align: center;
+        font-size: 18px;
+        width: 90%;
+    }
+
+}
+
+@media only screen and (max-width: 414px) {
+    .textComponent .text .title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .textComponent.leftAlignContent .text .title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .textComponent .text .desc:not(:first-child) {
+        font-size: 16px;
+    }
+
+    .textComponent .text br {
+        display: none;
+    }
+
+    .textComponent.leftAlignContent.purpleBg .text {
+        padding: 0 5%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .sustainability .textComponent.netZero {
+        padding: 70px 0;
+    }
+
+    .sustainability .textComponent.netZero img {
+        width: 250%;
+    }
+
+    .textComponent .text .desc:not(:first-child) {
+        line-height: 1.2;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .textComponent .text .title {
+        font-size: calc(var(--textfontHeading)/2) !important;
+
+    }
+    .textComponent .text .desc {
+        font-size: calc(var(--textfontDesc) - 6px) !important;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .sustainability-text .textComponent{
+    padding-top: calc(var(--textpaddingTop)/2) !important;
+    padding-bottom: calc(var(--textpaddingBottom)/2) !important;
+}
+    .textComponent .text .title {
+        font-size: calc(var(--textfontHeading)/2) !important;
+
+    }
+    .textComponent .text .desc {
+        font-size: calc(var(--textfontDesc) - 6px) !important;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .textComponent .text .title {
+        font-size: calc(var(--textfontHeading)/2) !important;
+
+    }
+    .textComponent .text .desc {
+        font-size: calc(var(--textfontDesc) - 9px) !important;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .sustainability-text .textComponent{
+    padding-top: calc(var(--textpaddingTop)/3) !important;
+    padding-bottom: calc(var(--textpaddingBottom)/3) !important;
+}
+    .textComponent .text .title {
+       text-align: center !important;
+       font-size: calc(var(--textfontHeading)/3) !important;
+
+    }
+    .textComponent .text .desc {
+        text-align: center !important;
+        font-size: calc(var(--textfontDesc)/3) !important;
+    }
+    .textComponent .text .buttonContainer {
+        justify-content: center !important;
+    }
+}
+@media only screen and (min-width: 1170px) and (orientation: portrait) {
+    .sustainability-text .textComponent{
+        padding-top: calc(var(--textpaddingTop)/3) !important;
+        padding-bottom: calc(var(--textpaddingBottom)/3) !important;
+    }
+    .textComponent .text .title {
+        text-align: center !important;
+        font-size: calc(var(--textfontHeading)/3) !important;
+     }
+     .textComponent .text .desc {
+         text-align: center !important;
+         font-size: calc(var(--textfontDesc)/3) !important;
+     }
+     .textComponent .text .buttonContainer {
+        justify-content: center !important;
+    }
+}

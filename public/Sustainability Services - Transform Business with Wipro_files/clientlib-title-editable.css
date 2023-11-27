@@ -1,0 +1,185 @@
+.content-sec-header-h2-akkurat-mono . floting-nav-title . title-regular{
+font-weight: normal !important;
+}
+.content-sec-header-h2-akkurat-mono . floting-nav-title . title-bold{
+font-weight: bold !important;
+}
+/*.innerpage h2 span.content-sec-header-h2-akkurat-mono*/
+.innerpage h2 span.title-content-sec {
+	color: #034ea2;
+    border-bottom: none;
+    font-family: var(--pnb);
+    display: inline-block;
+    margin-top: 0;
+    padding-left: 0px;
+    margin-bottom: 0;
+}
+.innerpage .font-24px {
+	font-size:24px;
+}
+.innerpage .font-30px {
+	font-size:30px;
+}
+.innerpage .font-36px {
+	font-size:36px;
+}
+.innerpage .font-40px {
+	font-size:40px;
+}
+.innerpage .font-48px {
+	font-size:48px;
+}
+.innerpage .font-54px {
+	font-size:54px;
+}
+.innerpage .font-60px {
+	font-size:60px;
+}
+.innerpage .font-72px {
+	font-size:72px;
+}
+.innerpage .font-90px {
+	font-size:90px;
+}
+.innerpage .font-100px {
+	font-size:100px;
+}
+
+ @media ( max-width : 767px) {
+	.innerpage .font-24px {
+		font-size:24px;
+	}
+    .innerpage .font-30px {
+        font-size:30px;
+    }
+    .innerpage .font-36px {
+        font-size:36px;
+    }
+    .innerpage .font-40px {
+        font-size:36px;
+    }
+    .innerpage .font-48px {
+        font-size:36px;
+    }
+    .innerpage .font-54px {
+        font-size:36px;
+    }
+    .innerpage .font-60px {
+        font-size:36px;
+    }
+    .innerpage .font-72px {
+        font-size:36px;
+    }
+    .innerpage .font-90px {
+        font-size:36px;
+    }
+    .innerpage .font-100px {
+        font-size:36px;
+    }
+ }
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --greyf2f2f2: #F2F2F2;
+    --greyccc: #CCCCCC;
+    --grey999: #999999;
+    --grey777: #777777;
+    --grey555: #555555;
+    --grey333: #333333;
+    --navyblue: #0E3570;
+    --skyblue: #00A2E0;
+    --cyan: #0089CF;
+    --blue: #034EA2;
+    --lightblue: #728CF9;
+    --green: #A5CF4C;
+    --applegreen: #6DC24B;
+    --parrotgreen: #4AA471;
+    --teal: #00B49D;
+    --orange: #E08747;
+    --darkorange: #D26356;
+    --yellow: #FCB715;
+    --sunnyyellow: #FFDA29;
+    --darkpink: #B12972;
+    --lightviolet: #A578E5;
+    --violet: #6F2C91;
+    --dullviolet: #7A6DA2;
+    --rubyred: #EF3341;
+  }
+.innerpage .font-color--white{
+    color: var(--white) !important;
+}
+.innerpage .font-color--black{
+    color: var(--black) !important;
+}
+.innerpage .font-color--greyf2f2f2{
+    color: var(--greyf2f2f2) !important;
+}
+.innerpage .font-color--greyccc{
+    color: var(--greyccc) !important;
+}
+.innerpage .font-color--grey999{
+    color: var(--grey999) !important;
+}
+.innerpage .font-color--grey777{
+    color: var(--grey777) !important;
+}
+.innerpage .font-color--grey555{
+    color: var(--grey555) !important;
+}
+.innerpage .font-color--grey333{
+    color: var(--grey333) !important;
+}
+.innerpage .font-color--navyblue{
+    color: var(--navyblue) !important;
+}
+.innerpage .font-color--skyblue{
+    color: var(--skyblue) !important;
+}
+.innerpage .font-color--cyan{
+    color: var(--cyan) !important;
+}
+.innerpage .font-color--blue{
+    color: var(--blue) !important;
+}
+.innerpage .font-color--lightblue{
+    color: var(--lightblue) !important;
+}
+.innerpage .font-color--green{
+    color: var(--green) !important;
+}
+.innerpage .font-color--applegreen{
+    color: var(--applegreen) !important;
+}
+.innerpage .font-color--parrotgreen{
+    color: var(--parrotgreen) !important;
+}
+.innerpage .font-color--teal{
+    color: var(--teal) !important;
+}
+.innerpage .font-color--orange{
+    color: var(--orange) !important;
+}
+.innerpage .font-color--darkorange{
+    color: var(--darkorange)!important ;
+}
+.innerpage .font-color--yellow{
+    color: var(--yellow) !important;
+}
+.innerpage .font-color--sunnyyellow{
+    color: var(--sunnyyellow) !important;
+}
+.innerpage .font-color--darkpink{
+    color: var(--darkpink) !important;
+}
+.innerpage .font-color--lightvoilet{
+    color: var(--lightviolet) !important;
+}
+.innerpage .font-color--voilet{
+    color: var(--violet) !important;
+}
+.innerpage .font-color--dullvoilet{
+    color: var(--dullviolet) !important;
+}
+.innerpage .font-color--rubyred{
+    color: var(--rubyred) !important;
+}

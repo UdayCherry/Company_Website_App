@@ -1,0 +1,10 @@
+.img{
+    padding: 20px;
+    align-items: flex-end;
+    border: 20px;
+   display: inline-flex;
+   flex-direction: row;
+}
+.row{
+    padding: 10px;
+}

@@ -1,0 +1,66 @@
+function getFeaturedJobs() {
+
+    let xhr = new XMLHttpRequest();
+    let container = document.querySelector('.jobs-container');
+  
+    xhr.onload = function() {
+      if(xhr.status === 200) {
+        let jobs = JSON.parse(xhr.response).jobs;
+          let rowDiv = document.getElementsByTagName("div").namedItem("featured-jobs"); // get the html row
+          let cells  = rowDiv.querySelectorAll('.b6-container__item');// html collection of cells
+          let viewAllDiv = rowDiv.querySelector('.wrap-cta'); // view all jobs container
+  
+          if(jobs.length) { // Add view all jobs button only if there are jobs
+              let viewAll = document.createElement('a');
+              viewAll.setAttribute('href', '/jobs?featured=true');
+              viewAll.innerHTML = 'View All';
+              viewAllDiv.appendChild(viewAll);
+          }
+          
+          for(let i = 0; i < cells.length; i++) { // there are three html cells to fill
+              if(jobs[i]){ // only add job if it exists
+                  let title = cells[i].querySelector('.b6-container__item-content');
+                  let aTitle = document.createElement('a');
+                  let location = document.createElement('p');
+                  let walkInDate = jobs[i].data.tags6[0];
+                  aTitle.setAttribute('href', '/jobs/' + jobs[i].data.slug);
+                  aTitle.innerHTML = jobs[i].data.title;
+                  location.innerHTML = jobs[i].data.short_location;
+                  title.appendChild(aTitle);
+                  title.appendChild(location);
+                  let walkInDateEl = document.createElement('p');
+                  walkInDateEl.innerHTML = 'Walk-In Date: ' +  walkInDate;
+                  walkInDateEl.setAttribute('class', 'b6-container__walk-in')
+                  cells[i].appendChild(walkInDateEl);
+                  let apply = document.createElement('a');
+                  apply.setAttribute('href', '/jobs/' + jobs[i].data.slug)
+                  apply.setAttribute('class', 'b6-container__apply')
+                  apply.innerHTML = 'Apply Now';
+                  cells[i].appendChild(apply);	
+              } else { // job does not exist
+                  let title = cells[i].querySelector('.b6-container__item-content');
+                  let p = document.createElement('p');
+                  p.innerHTML = 'More jobs coming soon';
+                  title.appendChild(p);	
+              }
+          }	
+      } 
+      else {
+            let errorMessage = document.createElement('p');
+            errorMessage.classList.add('error-message')
+            errorMessage.innerHTML = 'There are no featured jobs at this time';
+            container.appendChild(errorMessage);
+      }
+    }
+    xhr.open('GET', '/api/jobs?page=1&featured=true');
+    xhr.send();
+}
+  
+  
+if(document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', getFeaturedJobs())
+} else {
+getFeaturedJobs();
+}
+   
+ 

@@ -1,0 +1,10 @@
+.bgcolour{
+    background-color: black;
+}
+.middle{
+    justify-content: middle;
+}
+.bgcolour{
+    font-family:'Times New Roman', Times, serif;
+    padding: 30px 30px;
+}

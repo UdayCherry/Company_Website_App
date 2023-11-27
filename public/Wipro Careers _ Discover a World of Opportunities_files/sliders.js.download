@@ -1,0 +1,114 @@
+; (
+  function () {
+    // SKU-17
+
+    let sku17Carousel = document.querySelector(".sku-17__carousel");
+
+    if (sku17Carousel) {
+        let options = {
+            wrapAround: true,
+            resize: true,
+            adaptiveHeight: false,
+            prevNextButtons: true,
+            pageDots: true,
+            autoPlay: false,
+            imagesLoaded: true
+        }
+
+        var sku17Slide = new Flickity(sku17Carousel, options);
+        window.addEventListener('load', function () {
+          sku17Slide.resize()
+        })
+    }
+
+    // highlights carousel
+
+    let highlightsCarousel = document.querySelector(".highlights__carousel");
+
+    if (highlightsCarousel) {
+        let options = {
+            wrapAround: true,
+            resize: true,
+            adaptiveHeight: false,
+            prevNextButtons: true,
+            pageDots: false,
+            autoPlay: false,
+            imagesLoaded: true,
+            watchCSS: true
+        }
+
+        var highlightsSlide = new Flickity(highlightsCarousel, options);
+        window.addEventListener('load', function () {
+          highlightsSlide.resize()
+        })
+    }
+
+    // testimionals carousel
+
+    let testimonialsCarousel = document.querySelector(".testimonials__carousel");
+
+    if (testimonialsCarousel) {
+        let options = {
+            wrapAround: true,
+            resize: true,
+            adaptiveHeight: false,
+            prevNextButtons: true,
+            pageDots: false,
+            autoPlay: false,
+            imagesLoaded: true
+        }
+
+        var testimonialsSlide = new Flickity(testimonialsCarousel, options);
+        window.addEventListener('load', function () {
+          testimonialsSlide.resize()
+        })
+    }
+
+
+      //b3-modal__carousel
+
+      let b3ModalCarousel=document.querySelector(".b3-modal__carousel");
+
+      if (b3ModalCarousel) {
+          let options = {
+              wrapAround: true,
+              resize: true,
+              adaptiveHeight: false,
+              prevNextButtons: true,
+              pageDots: false,
+              autoPlay: false,
+              imagesLoaded: true
+          }
+
+          var b3ModalSlide = new Flickity(b3ModalCarousel, options);
+          window.addEventListener('load', function () {
+              b3ModalSlide.resize()
+          })
+      }
+
+      //achievers
+      const achieversCarousel = document.querySelector(".achievers-container__carousel");
+
+      if (!!achieversCarousel) {
+          let options = {
+              wrapAround: true,
+              resize: true,
+              adaptiveHeight: false,
+              prevNextButtons: true,
+              pageDots: true,
+              autoPlay: 6000,
+              imagesLoaded: true,
+              pauseAutoPlayOnHover: false
+          }
+
+          const achieversSlide = new Flickity(achieversCarousel, options);
+          window.addEventListener('load', function () {
+            achieversSlide.resize()
+          })
+      }
+      //achievers
+
+    return
+  }
+
+)();

@@ -1,0 +1,18 @@
+const videos = document.querySelectorAll('.iframe-wrap--js .video-embed--js')
+const images = document.querySelectorAll('.iframe-wrap--js .img--js')
+
+if (videos) {
+	window.addEventListener('load', function () {
+
+		for (let i = 0; i < images.length; i++) {
+			let video = videos[i]
+			let img = images[i]
+
+			let srcValue = video.getAttribute('src')
+			img.addEventListener('click', function (e) {
+				video.setAttribute('src', srcValue + '&autoplay=1')
+				img.classList.add('hidden')
+			})
+		}
+	})
+}

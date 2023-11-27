@@ -1,0 +1,50 @@
+let covidCarousel = document.querySelector('[data-covid-slider]')
+const covidSlides = document.querySelectorAll('.covid-banner__slide')
+
+if (covidCarousel) {
+
+  const options = {
+    wrapAround: true,
+    pageDots: true,
+    resize: true,
+    prevNextButtons: false,
+    adaptiveHeight: false,
+  }
+  covidCarousel = new Flickity(covidCarousel, options)
+  function setSlideHeight() {
+    covidSlides.forEach(function (item) {
+      item.style.height = '100%';
+    })
+  }
+  window.onload = setSlideHeight
+}
+
+let covidCarouselTwo = document.querySelector('[data-covid-slider-second]')
+
+if (covidCarouselTwo) {
+    let options = {
+        wrapAround: true,
+        adaptiveHeight: false,
+        prevNextButtons: false,
+        autoPlay: false,
+        imagesLoaded: true,
+        pageDots: true,
+        resize: true
+    }
+    
+    var covidCarouselTwoSlide = new Flickity(covidCarouselTwo, options);
+    window.addEventListener('load', function () {
+      covidCarouselTwoSlide.resize()
+    })
+
+    const bodyEl = document.body;
+
+    bodyEl.addEventListener('click', function(e) {
+      if (e.target === covidCarouselTwo) {
+        covidCarouselTwoSlide.resize();
+      }
+    })
+}
+
+
+

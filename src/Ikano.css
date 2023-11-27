@@ -1,0 +1,30 @@
+.Ikano_Text{
+    position: absolute;
+    width: 50%;
+   
+  
+    top: 250px;
+   
+    right: 25%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.Ikano_Image{
+    width: 50%;
+    height: 20%;
+    
+}
+.Ikanobackground{
+    padding: 70px 70px;
+}
+span{
+    font-family:'Times New Roman', Times, serif;
+}
+*{
+    font-family: 'Times New Roman', Times, serif;
+}

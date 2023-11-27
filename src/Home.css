@@ -1,0 +1,150 @@
+
+
+.video1{
+    width: 50%;
+    height: 20%;
+    padding: 30px;
+ }
+ video{
+    width: 100%;
+    height: 20%;
+    object-fit: cover;
+ }
+ .videocontainer1{
+    position: absolute;
+    width: 50%;
+    height: 5%;
+    padding: 80px;
+    top: 250px;
+   
+    right: 45%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+ 
+ }
+ .video2{
+    width: 50%;
+    height: 20%;
+    padding: 30px;
+ }
+ video{
+    width: 100%;
+    height: 20%;
+    object-fit: cover;
+ }
+ .videocontainer2{
+    position: absolute;
+    width: 70%;
+    height: 5%;
+    border: middle;
+    left: 30%;
+    transform: translate(-50% , -50%);
+    padding: 50px;
+   top: 150px;
+    
+    
+    display: inline-table;
+    
+    
+    align-items: center;
+    text-align: center;
+   
+    color: white;
+ 
+ }
+ table{
+     justify-content: center;
+    align-items: center;
+    
+    width: 150vh;
+ }
+ .margin{
+    border-radius: 50px;
+    margin-bottom: 50px;
+    
+ }
+ .image{
+    padding: 30px;
+ }
+ .container3{
+    padding: 50px;
+ }
+ button{
+    justify-content: center;
+ }
+ .button1 {
+   
+   color: black; 
+   background-color: pink;
+  
+   border-radius: 50px;
+ }
+ 
+ .button1:hover {
+   background-color: #04AA6D;
+   
+ }
+ .HomeImage1{
+   position: absolute;
+   width: 50%;
+   height: 50%;
+   padding: 80px;
+   top: 250px;
+  font-style: italic;
+   left:20%;
+   transform: translate(-50% , -50%);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white;
+
+}
+.button {
+   
+   border: none;
+   
+   padding: 16px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   transition-duration: 0.4s;
+   cursor: pointer;
+ }
+ .hero-btns{
+   transform: translate(-50% , -50%);
+   position: absolute;
+   width: 50%;
+   height: 50%;
+   padding: 80px;
+   top: 400px;
+   left:90%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white;
+
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+  
+  
+ 

@@ -1,0 +1,26 @@
+.Text5g{
+    position: absolute;
+    width: 50%;
+   
+  
+    top: 200px;
+   
+    right: 15%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+}
+.text25g{
+    background-color:bisque;
+    font-size: x-large;
+   padding: 10px 20px 20px 250px ;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.col-sm-6{
+    padding: 10px 10px 10px 80px;
+}

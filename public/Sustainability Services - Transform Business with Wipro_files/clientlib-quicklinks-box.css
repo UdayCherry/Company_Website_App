@@ -1,0 +1,177 @@
+.quicklinks_boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.quicklinks_boxes .quicklink {
+    width: 33.33%;
+    margin: 0;
+    max-width: unset;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.quicklinks_boxes .quicklink a {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.quicklinks_boxes .quicklink a .bg span {
+    display: none;
+}
+
+.quicklinks_boxes .quicklink a:hover {
+    text-decoration: none;
+}
+
+.quicklinks_boxes .quicklink a .content {
+    /* background: rgba(0,0,0,0.8); */
+    width: 100%;
+    position: relative;
+    padding: 22px 0;
+    width: 100%;
+}
+
+.quicklinks_boxes .quicklink .title {
+    /* transform: translate(0px, 120px); */
+    transition: transform 0.5s ease-in-out;
+    font-family: var(--pnsb);
+    font-size: 40px;
+    text-align: center;
+    line-height: 1.1;
+    margin: 0 auto;
+    width: calc(100% - 88px);
+    color: #fff;
+    position: relative;
+    /* min-height: 88px; */
+    display: block;
+    transform: none;
+    /* align-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap; */
+}
+
+.quicklinks_boxes .quicklink .desc {
+    /* transform: translate(0px, 50px);
+    opacity: 0; */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+    font-family: var(--pnr);
+    font-size: 28px;
+    line-height: 1.2;
+
+    text-align: center;
+    color: #fff;
+    margin: 10px auto 0;
+    width: calc(100% - 88px);
+    position: relative;
+    min-height: 66px;
+}
+
+.quicklinks_boxes .quicklink .buttonContainer {
+    /* transform: translate(0px, 50px); */
+    /* opacity: 0; */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.quicklinks_boxes .quicklink:first-child .title span {
+    color: #bc246a;
+}
+
+.quicklinks_boxes .quicklink:nth-child(2) .title span {
+    color: #7dc35f;
+}
+
+.quicklinks_boxes .quicklink.light a .content {
+    background: rgba(0,0,0,0.5);
+    pointer-events: none;
+}
+@media screen and (max-width: 1440px) {
+    .quicklinks_boxes .quicklink {
+        min-height: 400px;
+    }
+    .quicklinks_boxes .quicklink .title {
+        font-size: 29px;
+    }
+    .quicklinks_boxes .quicklink .desc {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 1366px) {
+    .quicklinks_boxes .quicklink {
+        min-height: 400px;
+    }
+    .quicklinks_boxes .quicklink .title {
+        font-size: 26px;
+    }
+    .quicklinks_boxes .quicklink .desc {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .quicklinks_boxes {
+        flex-wrap: wrap;
+    }
+    .quicklinks_boxes .quicklink {
+        min-height: 400px;
+        width: 50%;
+    }
+    .quicklinks_boxes .quicklink .title {
+        transform: translate(0, 0);
+    }
+    /* .quicklinks_boxes .quicklink .title {
+        font-size: 50px;
+    }
+    .quicklinks_boxes .quicklink .desc {
+        font-size: 24px;
+    } */
+    .quicklinks_boxes .quicklink .desc {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    .quicklinks_boxes .quicklink .buttonContainer {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .quicklinks_boxes .quicklink .title {
+        /* font-size: 40px; */
+    }
+
+    .quicklinks_boxes .quicklink .desc {
+        /* font-size: 20px; */
+    }
+    .quicklinks_boxes .quicklink .title br {
+        display: none;
+    }
+
+    .quicklinks_boxes .quicklink .desc br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .quicklinks_boxes .quicklink {
+        min-height: 400px;
+        width: 100%;
+    }
+    .quicklinks_boxes .quicklink .title {
+        width: calc(100% - 44px);
+    }
+    .quicklinks_boxes .quicklink .desc {
+        margin: 5px auto 0;
+        width: calc(100% - 44px);
+    }
+}

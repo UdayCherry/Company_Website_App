@@ -1,0 +1,87 @@
+.Contactbox{
+    
+    font-weight: bold;
+    border: 50px;
+    padding: 60px;
+
+}
+p{
+    align-items: left;
+}
+.Contactright{
+    bottom: 3px;
+    padding: 10px;
+}
+.Container{
+    display: flex;
+    background-color:black;
+}
+.Container div{
+    color: aliceblue;
+    align-items: center;
+    margin: 50px;
+    width: 150px;
+    border-color: brown;
+    padding: 20px;
+    border-style: auto;
+    border-style: solid;
+    
+    
+}
+#Container{
+    padding: 50px;
+    border: 20px;
+    margin: 20px;
+    margin-bottom: 10px;
+   
+    
+}
+.arr {
+    background-color: rgb(242, 250, 11);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    transition: 0.4s ease;
+    border-top: 50px solid black;
+    border-left: 50px solid black;
+    transform: rotate(95deg);
+    left: 25px;
+    top: 35px;
+
+}
+.arr:hover{
+    box-shadow: 0px 0px 10px 10px rgb(190, 16, 16);
+
+}
+.arr div{
+    position: absolute;
+}
+.right{
+    transform: rotate(-90deg);
+}
+
+.right1{
+    transform: rotate(-90deg);
+}
+.right2{
+    transform: rotate(-90deg);
+}
+.right3{
+    transform: rotate(-90deg);
+}
+.right4{
+    transform: rotate(-90deg);
+}
+hr{
+    
+    
+      background-color: white;
+      padding: 2px;
+      border-radius: 2px;
+      border-color:white;
+      
+}
+.container-fluid{
+    justify-content: flex-start;
+}
+

@@ -1,0 +1,19 @@
+window.addEventListener("DOMContentLoaded", () => {
+var carousel = document.querySelector('#f7-carousel-1');
+var flkty = new Flickity(carousel);
+var cellsButtonGroup = document.querySelector('.SKU-F7-nav .flickity-slider');
+var cellsButtons = [...document.querySelectorAll(".SKU-F7-nav .flickity-slider .carousel-cell")];
+cellsButtonGroup.addEventListener('click', function( event ) {
+if (!matchesSelector( event.target, '.SKU-F7-nav .flickity-slider .carousel-cell')) {
+return;
+}
+var index = cellsButtons.indexOf( event.target );
+flkty.select(index);
+});
+flkty.on('select', function() {
+  var previousSelectedButton = cellsButtonGroup.querySelector('.is-selected'); 
+  var selectedButton = cellsButtonGroup.children[flkty.selectedIndex]; 
+  previousSelectedButton.classList.remove('is-selected');
+  selectedButton.classList.add('is-selected');
+});
+})

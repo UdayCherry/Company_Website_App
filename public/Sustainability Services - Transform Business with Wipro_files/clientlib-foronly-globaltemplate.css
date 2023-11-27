@@ -1,0 +1,19 @@
+
+/** td.navbar-section-3 {
+    display: none;
+}
+    **/
+/*.menu-list-overlay-sub-content {
+font-size:14px
+}*/
+@media only screen and (min-width: 1200px){
+.hamburgerInactive{
+display:none;
+}
+
+}
+@media only screen and (max-device-width: 1024px) {
+td.navbar-section-3 {
+    display: table-cell;
+}
+}

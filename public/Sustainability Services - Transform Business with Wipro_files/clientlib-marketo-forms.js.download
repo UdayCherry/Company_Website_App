@@ -1,0 +1,45 @@
+function setMarketoFormDateFieldBoundary() {
+    if (window.location.href.indexOf("en-JP") > -1) {
+        $('body').addClass("enJP");
+    }
+
+    const formContainers = document.querySelectorAll('.marketo_form');
+
+    formContainers.forEach((formContainer) => {
+        const boundType = formContainer.dataset.boundtype;
+        const dateInputs = formContainer.querySelectorAll('input[type="date"]');
+
+        dateInputs.forEach((dateInput) => {
+            if (boundType == 'relative') {
+                const boundMin = +formContainer.dataset.boundminrel;
+                const boundMax = +formContainer.dataset.boundmaxrel;
+                
+                const dateToday = new Date();
+                const dateStartString = new Date(dateToday.getUTCFullYear(), dateToday.getMonth(), dateToday.getDate()+boundMin).toISOString().split("T")[0];
+                const dateEndString = new Date(dateToday.getUTCFullYear(), dateToday.getMonth(), dateToday.getDate()+boundMax).toISOString().split("T")[0];
+        
+                dateInput.min = dateStartString;
+                dateInput.max = dateEndString;
+            }
+            else if (boundType == 'absolute') {
+                const boundMin = formContainer.dataset.boundminabs;
+                const boundMax = formContainer.dataset.boundmaxabs;
+        
+                dateInput.min = boundMin;
+                dateInput.max = boundMax;
+            }
+        });
+    });
+}
+
+document.addEventListener(('DOMContentLoaded'), () => {
+    [...document.querySelectorAll('.marketo_form')].forEach((form) => {
+        const formTitle = form.querySelector('.marketo-form-title');
+        const formSubtitle = form.querySelector('.marketo-form-subtitle');
+        if (formTitle.innerText === '') {
+            formTitle.remove();
+        } if (formSubtitle.innerText === '') {
+            formSubtitle.remove();
+        }
+    });
+});

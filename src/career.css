@@ -1,0 +1,16 @@
+#boxes{
+   
+    width: 400px;
+    padding: 30px;
+    border: 5px solid gray;
+    margin: 0;
+    border-style:double;
+    padding-left: 90px;
+   
+}
+p{
+    color: azure;
+}
+h5{
+    color: aliceblue;
+}

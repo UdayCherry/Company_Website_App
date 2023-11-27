@@ -1,0 +1,317 @@
+$(document).ready(function() {
+			$(document).on(
+				'click',
+				'.new-play-btn',
+				function (e) {
+					$('.microsite_wrapper .popup2').hide();
+					$('.microsite_wrapper .popup2 .popup-image').hide();
+					$('.microsite_wrapper .popup2 .popup-video').hide();
+		
+					var play_button;
+						if(($(this).parent().parent().parent('.wipro-case-studies-bg').length>0)||($(this).parent().parent().parent('.image-section.micro-clickable').length>0)){
+							var textLenth = $('.popup2 .microsite_title')
+							.html($(this).parent().parent().parent().attr('data-title'))
+							.html();
+						}
+						else{
+							var textLenth = $('.popup2 .microsite_title')
+							.html($(this).parent().parent().attr('data-title'))
+							.html();
+						}
+						
+						if (textLenth.length > 60) {
+							var newtextLenth = textLenth.substring(0, 60) + '...';
+							$('.popup2 .microsite_title').html(newtextLenth);
+						} else {
+							if($(this).parent().parent().parent('.wipro-case-studies-bg')||$(this).parent().parent().parent('.image-section.micro-clickable')){
+							$('.popup2 .microsite_title').html(textLenth);
+							}
+							else{
+								$('.popup2 .microsite_title').html(textLenth);
+							}
+						}
+					play_button= $(this).parent();
+					if (play_button.length >= 1) {
+						var thumbnail = play_button.attr('thumbnail');
+						var source_hd = play_button.attr('source-hd');
+						var source_sd = play_button.attr('source-sd');
+						videoShare = play_button.attr('source-external');
+						sharepagePath = play_button.attr('data-path');
+						setTimeout(()=>{
+							$('html, body').css({'overflow': 'hidden'}).addClass("ipad_scroll");
+                       	},100)
+						if (source_hd.startsWith('https://www.youtube.com')) {
+							$videoSrc = source_hd.replace('watch?v=', 'embed/');
+							$(this).closest('.microsite_wrapper').find('.micrositeModal').css('display', 'block');
+							$(this).closest('.microsite_wrapper').find('#micrositeModal #video1').attr(
+								'src',
+								$videoSrc + '?autoplay=1&amp;modestbranding=1&amp;showinfo=0'
+							);
+							$('#micrositeModal').on('shown.bs.modal', function (e) {
+								$(this).closest('.microsite_wrapper').find('#micrositeModal #video1').attr(
+									'src',
+									$videoSrc + '?autoplay=1&amp;modestbranding=1&amp;showinfo=0'
+								);
+							});
+							$('#micrositeModal').on('hide.bs.modal', function (e) {
+								$(this).closest('.microsite_wrapper').find('#micrositeModal #video1').attr('src', $videoSrc);
+							});
+							$('#closemodal').click(function() {
+								$('#micrositeModal').modal('hide');
+							});
+							options = 'video';
+						}  else if(source_hd.startsWith('https://player.vimeo.com')) {
+							$videoSrc = source_hd;
+							options = 'video';
+						
+							$(this).parents().children('.micrositeModal').css('display', 'block');
+                            $(this).parents().children('.micrositeModal').find('#video1').attr('src', $videoSrc + '?badge=0&amp;autoplay=1&amp;player_id=0&amp;app_id=58479');
+							$(this).parents().children('.micrositeModal').on('shown.bs.modal', function (e) {
+								$(this).parents().children('.micrositeModal').find('#video1').attr('src', $videoSrc + '?badge=0&amp;autoplay=1&amp;player_id=0&amp;app_id=58479');
+							});
+							$(this).parents().children('.micrositeModal').on('hide.bs.modal', function (e) {
+								$(this).parents().children('.micrositeModal').find('#video1').attr('src', $videoSrc);
+							});
+							
+							$('.micrositeModal #closemodal').click(function() {
+								$('#micrositeModal').modal('hide');
+							});
+						} else {
+							var player= $(this).closest('.microsite_wrapper').find('.popup2 #popup-player1');
+
+							jwplayer(player[0]).setup({
+								image: thumbnail,
+								autostart: true,
+								sources: [
+									{
+										file: source_hd,
+										label: '720p HD',
+									},
+									{
+										file: source_sd,
+										label: '360p SD',
+										default: 'true',
+									},
+								],
+								width: '100%',
+								height: '100%',
+							});
+							// jwplayer(player[0]).play();
+							$(this).closest('.microsite_wrapper').find('.popup2 .popup-video').show();
+							$('body').css('overflow', 'hidden');
+							$('html, body').css({'overflow': 'hidden'}).addClass("ipad_scroll");
+							options = 'video';
+							$(this).closest('.microsite_wrapper').find('.popup2').show();
+							$('body,html').css('overflow', 'hidden');
+							options = 'video';
+							function flexHeight() {
+								setTimeout(function () {
+									$('.transparent-image').each(function () {
+										var wh = $(window).height();
+										if ($(this).height() > 650) {
+											$(this).addClass('fixed-top');
+											$('.transparent').css('overflow-y', 'auto');
+										} else {
+											$(this).removeClass('fixed-top');
+											$('.transparent').css('overflow-y', 'hidden');
+										}
+										if ($(this).height() > wh) {
+											$(this).addClass('fixed-top');
+											$('.transparent').css('overflow-y', 'auto');
+										} else {
+											$(this).removeClass('fixed-top');
+											$('.transparent').css('overflow-y', 'hidden');
+										}
+									});
+								}, 100);
+							}
+							flexHeight();
+							$(window).resize(function () {
+								flexHeight();
+							});
+							if ($(window).width() >= 767) {
+								$('.transparent').on('click', function (e) {
+									if (e.target !== this) return;
+									$(this).parent().hide();
+									$('.social-container-case').removeClass(
+										'social-container-case-open'
+									);
+									$('html,body').css('overflow', 'auto').removeClass("ipad_scroll");
+									var e = jQuery('video').attr('src');
+									console.log(e),
+										void 0 !== e &&
+											(jQuery('video').attr('src', ''),
+											jQuery('video').attr('src', e));
+								});
+	
+							}
+							$('.microsite_wrapper .popup-close-btn').on('click', function (e) {
+								$('.modal-backdrop').css('display', 'none');
+								$('.micrositeModal').css('display', 'none');
+								if (e.target !== this) return;
+								$(this).parent().parent().parent().hide();
+								$('.social-container-case').removeClass(
+									'social-container-case-open'
+								);
+							
+								$('html, body').css({'overflow': 'auto'}).removeClass("ipad_scroll");
+								var e = jQuery('video').attr('src');
+								console.log(e),
+									void 0 !== e &&
+										(jQuery('video').attr('src', ''),
+										jQuery('video').attr('src', e));
+							});
+							$(this).closest('.microsite_wrapper').find('.popup2').css('display','block');
+						}
+						let element= $('.popup');
+						element[0].setAttribute('style', 'display:none !important');
+
+					} else {
+						imgsrc = $(this).find('img').attr('src');
+						imgShare = $(this).find('img').attr('data-external');
+						$('.microsite_wrapper .popup2 .popup-image').find('img').attr('src', imgsrc);
+						$('.microsite_wrapper .popup2').show();
+						$('.microsite_wrapper .popup2 .popup-image').show();
+						$('body,html').css('overflow', 'hidden');
+						options = 'image';
+						$('html, body').css({'overflow': 'hidden'}).addClass("ipad_scroll");
+					}
+					$('.share-icon-img-popup')
+						.unbind()
+						.click(function (event) {
+							event.stopPropagation();
+							$('.social-container-case.video-share-container').toggleClass(
+								'social-container-case-open'
+							);
+						});
+					$('.social-image-popup')
+						.unbind()
+						.click(function (event) {
+							event.stopPropagation();
+							var media = $(this).attr('data-media');
+							var currentTitle = $(this).attr('data-media-title');
+							var mediaTitle = encodeURI(currentTitle);
+							if (options == 'video') {
+								if (sharepagePath != null) {
+									urlShare(media, videoShare, mediaTitle, sharepagePath);
+								} else {
+									urlShare(media, videoShare, mediaTitle);
+								}
+							} else if (options == 'image') {
+								urlShare(media, imgShare, mediaTitle);
+							}
+						});
+				}
+				
+			);
+			$(document).keydown(function (e) {
+				if (e.keyCode == 27) {
+                    e.stopPropagation();
+                    $('.modal-backdrop').css('display', 'none');
+                    $('.micrositeModal').css('display', 'none');
+                    $('.micrositeModal').removeClass('in');
+					$("#micrositeModal iframe").attr("src", $("#micrositeModal iframe").attr("src"));
+                    console.log(e),
+                        void 0 !== e && ($('video').attr('src', ''), $('video').attr('src', e));
+					$('.microsite_wrapper .popup2').each(function(){
+                        if($(this).css("display") == "block") {
+                            jwplayer().remove();
+							$(this).hide();
+                        }
+					});
+                    $('html, body').css({'overflow': 'auto'}).removeClass("ipad_scroll");
+				}
+			});
+			
+			$('.microsite_wrapper .popup2 .popup-close-btn').on('click', function (e) {
+				e.stopPropagation();
+				jwplayer().remove();
+				$('.modal-backdrop').css('display', 'none');
+				$('.micrositeModal').css('display', 'none');
+				$('.micrositeModal').removeClass('in');
+				console.log(e),
+					void 0 !== e && ($('video').attr('src', ''), $('video').attr('src', e));
+				$('html, body').css({'overflow': 'auto'}).removeClass("ipad_scroll");
+			});
+			$('.micrositeModal .modal-dialog').click(function(e){
+				$('html, body').css({'overflow': 'auto'}).removeClass("ipad_scroll");
+                e.stopPropagation();
+			});
+			$('body').click(function (event) {
+				if(!$(event.target).closest('.micrositeModal .modal-dialog').length) {
+
+					if (navigator.userAgent.search("MSIE") >= 0) {
+						$('.micrositeModal').css('display','none');
+						$('.micrositeModal').modal('hide');
+						$("#micrositeModal iframe").attr("src", $("#micrositeModal iframe").attr("src"));
+
+					} else {
+						$('.micrositeModal').modal('hide');
+						$("#micrositeModal iframe").attr("src", $("#micrositeModal iframe").attr("src"));
+						$('.micrositeModal').css('display','none');
+					}
+					
+				} 
+
+				if($(event.target).closest(".microsite_wrapper .popup2 .transparent .transparent-image").length){
+					event.stopPropagation();
+				}
+
+				if((window.innerWidth > 768)  && (!$(event.target).closest(".microsite_wrapper .popup2 .transparent .transparent-image").length) && ($(event.target).closest(".popup2").css("display") == "none")) {
+						$('.modal-backdrop').css('display', 'none');
+						$('.micrositeModal').css('display', 'none');
+						$('.micrositeModal').removeClass('in');
+						$(event.target).closest(".microsite_wrapper .popup2").hide();
+					console.log(event),
+						void 0 !== event && ($('video').attr('src', ''), $('video').attr('src', event));
+						jwplayer().remove();
+						$("#micrositeModal iframe").attr("src", $("#micrositeModal iframe").attr("src"));
+						$('html, body').css({'overflow': 'auto'}).removeClass("ipad_scroll");
+
+				}   
+
+				if(window.innerWidth <= 768 ){
+					if((!$(event.target).closest(".microsite_wrapper .popup2 .transparent .transparent-image").length) && (!$(event.target).closest(".video-wrapr .popup2 .transparent .transparent-image").length) && (!$(event.target).closest(".heroBannerWapper .popup2 .transparent .transparent-image").length) && (($(event.target).closest(".popup2").css("display") == "block")&&(!$(event.target).parents('.jw-controls').length>=1))) {
+							$('.modal-backdrop').css('display', 'none');
+							$('.micrositeModal').css('display', 'none');
+							$('.micrositeModal').removeClass('in');
+							$(event.target).closest(".microsite_wrapper .popup2").hide();
+						console.log(event),
+							void 0 !== event && ($('video').attr('src', ''), $('video').attr('src', event));
+							jwplayer().remove();
+							$("#micrositeModal iframe").attr("src", $("#micrositeModal iframe").attr("src"));
+							$('html, body').css({'overflow': 'auto'}).removeClass("ipad_scroll");
+					}
+				}
+
+			});
+			$('.microsite_wrapper .micrositeModal .close').click(function(){
+				if (navigator.userAgent.search("MSIE") >= 0) {
+					$('.micrositeModal').css('display','none');
+					$('.micrositeModal').modal('hide');
+					$("#micrositeModal iframe").attr("src", $("#micrositeModal iframe").attr("src"));
+					
+				} else {
+					$('.micrositeModal').modal('hide');
+					$("#micrositeModal iframe").attr("src", $("#micrositeModal iframe").attr("src"));
+					$('.micrositeModal').css('display','none');
+					
+				}
+				$('html, body').css({'overflow': 'auto'}).removeClass("ipad_scroll");
+			});
+
+
+	$(".micro-clickable, .wipro-case-studies-bg, .wipro-solutions-squares-content, .wipro-solutions-squares-content-image").each(function(){
+		let anchorUrl =  $(this).find("a").attr("href");
+		if(anchorUrl !== undefined && anchorUrl !=="") {
+			if(anchorUrl !=="javascript:void(0)") {
+				$(this).find("a").addClass("cursor");
+			} else {
+				$(this).find("a").addClass("no-cursor");
+			}
+		} else {
+			$(this).find("a").addClass("no-cursor");
+		}
+	});
+
+});

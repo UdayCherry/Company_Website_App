@@ -1,0 +1,34 @@
+footer{
+    background-color: aqua;
+}
+.social li{
+   padding: 10px;
+   display: flex;
+}
+
+.links li{
+    padding: 10px;
+   
+   display: flex;
+  
+
+
+}
+.links{
+    justify-content: center;
+  
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.last{
+    padding-inline-start: 450px;
+
+}
+.social_1{
+    justify-content: center;
+  
+    display: flex;
+    text-decoration: none;
+   
+}
